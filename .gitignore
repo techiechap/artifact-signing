@@ -6,3 +6,6 @@
 *.asc
 .DS_Store
 archive/
+
+bootstrap.sh
+Makefile
