@@ -1,11 +1,30 @@
+cat > .gitignore <<'EOF'
+# Terraform local/generated
 .terraform/
 *.tfstate
 *.tfstate.*
 *.tfplan
 *.tfplan.json
-*.asc
-.DS_Store
-archive/
+build-plan/
 
+# Local helper files
 bootstrap.sh
 Makefile
+ci-image
+
+# Local/archive scratch
+archive/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets / private keys
+*.key
+*.pem
+*.p12
+*.pfx
+*.asc.tmp
+EOF
+
